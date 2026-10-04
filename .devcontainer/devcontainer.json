@@ -1,0 +1,21 @@
+{
+  "name": "Android AI Development",
+
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "remoteUser": "ubuntu",
+
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+
+  "workspaceFolder": "/workspace",
+
+  "mounts": [
+    {
+      "type": "volume",
+      "source": "android-gradle-cache",
+      "target": "/home/ubuntu/.gradle"
+    }
+  ]
+}
